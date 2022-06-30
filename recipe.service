@@ -1,0 +1,15 @@
+[Unit]
+Description=Recipe Bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+WorkingDirectory=/root/recipe_bot
+ExecStart=/bin/python3 /root/recipe_bot/__main__.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
